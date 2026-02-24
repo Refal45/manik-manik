@@ -2,7 +2,7 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
     <title>˚˖𓍢 D.bizuujueri ˖𓍢🎀 ⋆ beranda</title>
     <!-- Font Awesome 6 (free) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -23,9 +23,7 @@
       /* --- navigasi dengan burger menu --- */
       nav {
         background: #ffffff;
-        box-shadow:
-          0 4px 15px rgba(0, 0, 0, 0.05),
-          0 2px 0 #ffb6c1;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05), 0 2px 0 #ffb6c1;
         padding: 1rem 2rem;
         position: sticky;
         top: 0;
@@ -113,6 +111,7 @@
         background-clip: text;
         color: transparent;
         margin-bottom: 0.25rem;
+        word-break: break-word;
       }
 
       .hero .tagline {
@@ -170,9 +169,7 @@
         max-width: 1200px;
         margin: 2rem auto;
         padding: 2.5rem 2rem;
-        box-shadow:
-          0 10px 0 #ffb7c9,
-          0 20px 25px -10px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 10px 0 #ffb7c9, 0 20px 25px -10px rgba(0, 0, 0, 0.3);
       }
 
       .about-preview h2 {
@@ -183,6 +180,7 @@
         justify-content: center;
         gap: 0.8rem;
         margin-bottom: 1.5rem;
+        flex-wrap: wrap;
       }
 
       .about-preview h2 i {
@@ -261,6 +259,7 @@
         align-items: center;
         justify-content: center;
         gap: 0.8rem;
+        flex-wrap: wrap;
       }
 
       .testimonial-grid {
@@ -351,6 +350,7 @@
         align-items: center;
         justify-content: center;
         gap: 0.8rem;
+        flex-wrap: wrap;
       }
 
       .advantage-items {
@@ -407,6 +407,7 @@
         align-items: center;
         justify-content: center;
         gap: 0.8rem;
+        flex-wrap: wrap;
       }
 
       .steps-container {
@@ -473,6 +474,7 @@
         align-items: center;
         justify-content: center;
         gap: 0.8rem;
+        flex-wrap: wrap;
       }
 
       .faq-grid {
@@ -524,6 +526,7 @@
         align-items: center;
         justify-content: center;
         gap: 0.8rem;
+        flex-wrap: wrap;
       }
 
       .gallery-grid {
@@ -537,9 +540,7 @@
         border: 3px solid #000000;
         border-radius: 30px;
         overflow: hidden;
-        transition:
-          transform 0.3s,
-          box-shadow 0.3s;
+        transition: transform 0.3s, box-shadow 0.3s;
         box-shadow: 0 6px 0 #ffb7c9;
       }
 
@@ -550,10 +551,11 @@
 
       .gallery-img {
         width: 100%;
-        height: 200px; /* disamakan untuk semua gallery */
+        height: 200px;
         object-fit: cover;
         display: block;
         border-bottom: 3px solid #000000;
+        background-color: #ffdde8; /* fallback color */
       }
 
       .gallery-caption {
@@ -579,10 +581,7 @@
         background: #ffffff;
         border-radius: 40px 40px 35px 35px;
         overflow: hidden;
-        box-shadow:
-          0 15px 25px -8px rgba(0, 0, 0, 0.2),
-          0 0 0 2px #000000 inset,
-          0 0 0 4px #ffb7c9 inset;
+        box-shadow: 0 15px 25px -8px rgba(0, 0, 0, 0.2), 0 0 0 2px #000000 inset, 0 0 0 4px #ffb7c9 inset;
         transition: transform 0.25s;
         display: flex;
         flex-direction: column;
@@ -590,14 +589,12 @@
 
       .card:hover {
         transform: translateY(-7px);
-        box-shadow:
-          0 22px 30px -10px #000000,
-          0 0 0 4px #ff5f7c inset;
+        box-shadow: 0 22px 30px -10px #000000, 0 0 0 4px #ff5f7c inset;
       }
 
       .card-img {
         width: 100%;
-        height: 220px; /* semua gambar card sama tinggi */
+        height: 220px;
         background: #ffdde8;
         display: flex;
         align-items: center;
@@ -611,6 +608,7 @@
         height: 100%;
         object-fit: cover;
         display: block;
+        background-color: #ffdde8; /* fallback color */
       }
 
       .card-content {
@@ -660,6 +658,7 @@
         align-items: baseline;
         gap: 0.4rem;
         margin: 0.7rem 0 1rem;
+        flex-wrap: wrap;
       }
 
       .price small {
@@ -734,9 +733,7 @@
         padding: 0.9rem;
         border-radius: 50%;
         color: #ffffff;
-        box-shadow:
-          0 5px 0 #ffb7c9,
-          0 8px 12px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 0 #ffb7c9, 0 8px 12px rgba(0, 0, 0, 0.1);
         margin-bottom: 0.8rem;
       }
 
@@ -749,6 +746,7 @@
         font-size: 1.1rem;
         margin: 0.5rem 0;
         color: #2a2a2a;
+        word-break: break-word;
       }
 
       .info-block a {
@@ -857,6 +855,11 @@
         .gallery-section h2 {
           font-size: 2rem;
         }
+
+        .badge {
+          padding: 0.7rem 1.2rem;
+          font-size: 1rem;
+        }
       }
 
       @media screen and (max-width: 480px) {
@@ -886,8 +889,17 @@
         }
 
         .badge {
-          padding: 0.6rem 1.2rem;
-          font-size: 1rem;
+          padding: 0.6rem 1rem;
+          font-size: 0.9rem;
+          gap: 0.4rem;
+        }
+
+        .badge i {
+          font-size: 1.2rem;
+        }
+
+        .gallery-img {
+          height: 160px; /* reduced height for mobile */
         }
       }
     </style>
@@ -1078,40 +1090,45 @@
         <div class="gallery-item">
           <img
             class="gallery-img"
-            src="https://lh3.googleusercontent.com/sitesv/APaQ0STpbkuvG9ceomU0rzyYfbguFpNxaSmNoA_umsuq9CEnGBa7COvgPxnH-VgypGYXLcWKUfHesUz72IjjvGqIfo_V1sVQnFdSJl13kE61GZCZfE-ze_xdo-TLJqCjeKEskTDcrAUY5KaW8yAF_qUb3m_5SmjHXIVYYVF8t7DLx7n7n6vzahfmcZEs151-GlZDi8Pm3ugKjZozfSDDJ51nBu8jGK_7LSuWhEVI=w1280"
+            src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=300&fit=crop"
             alt="Sunrio Series"
+            loading="lazy"
           />
           <div class="gallery-caption">Sunrio Series</div>
         </div>
         <div class="gallery-item">
           <img
             class="gallery-img"
-            src="https://lh3.googleusercontent.com/sitesv/APaQ0STtNZoKK7U-QH6KMBc8uEEtMbsHMpmkxlD2gzkqriOaLoHospCMW1afi7D_gRGK7rkTRENfZ2GSOOh14UXG3to8bcl-RZSWdCzzDqE_ZnJ7AqQItWvNS3POR_HtPVKthCzX74A9GtzisRriu_aXB-VBJq_58GOjWORkg6a_jwD9ALlIVoOqpkzxfn81Tf5m_pCDYfexSd56ZAl2PtxyHaNL6CUTNNVofhPx3pk=w1280"
+            src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=300&fit=crop&bw=1"
             alt="Toy Story Series"
+            loading="lazy"
           />
           <div class="gallery-caption">Toy Story</div>
         </div>
         <div class="gallery-item">
           <img
             class="gallery-img"
-            src="https://lh3.googleusercontent.com/sitesv/APaQ0SQtLHtKPwUl8IZoge_v-1M10lvo-hqlywBkGg8jlnoHqZvK8uNrbfKGW113g1FQ5yEcpMIbLAcTAgb3zZrLQybSvCQ1iMVd97Iit9GcsWARmNJnY7d-uKQs_JeFNcUro2Ucmhr9LcAoeZVvl5lb7Wla5DdYdMy8DxrXr2udOWAoKljORQfKJ17cTA-w6q6aZES40t_vq5BjVLUP7ABhj7_xWD6Y-q3oOc1McI0=w1280"
+            src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=300&fit=crop&sepia=1"
             alt="Love Series"
+            loading="lazy"
           />
           <div class="gallery-caption">Love Series</div>
         </div>
         <div class="gallery-item">
           <img
             class="gallery-img"
-            src="https://lh3.googleusercontent.com/sitesv/APaQ0SRtoY6Z2Wb1nlUECDwIDRaXGFa5YzGRcyAm2senhlD0Mg8n-cbxtjeBzZoGhLFplOogWK1_FAO5z6GQzYhXVb4yMEkOtLpRdB4NYW0oMqscmRCWSDFV7ZupczJtuD3tfly8eo9mJpCekH25P5SRZgqX2cuKwphFXxkIEZD-SAfQ1CIfgwEwybEoAqvr6rjYsIhScNb3jvEaJQ6wviPzE2lpJN7A4xRgMUrj=w1280"
+            src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=300&fit=crop&gold=1"
             alt="Gold Series"
+            loading="lazy"
           />
           <div class="gallery-caption">Gold Series</div>
         </div>
         <div class="gallery-item">
           <img
             class="gallery-img"
-            src="https://lh3.googleusercontent.com/sitesv/APaQ0SR5lL5Uzy25K5ifYYtvxy1S-9IfMl1Rlvko3WeHcQ1l0bmfa9JJxHUqHGgzQIm_9dPC79_3KfEoBp2TR-4_zopp-ZOAeLBuhwaHt4Lj2hoOcRF2DjmWGi5pENIRrWCSUSmpuw4E2BwtIsIk3OQ8OKbNrU9kSZZ50Dl_uoEY8ub_oRCLo2MYElUW0_sUGCVpsPqXPP9d5LKGJbdwyZHBzGSCQN5pZWLMjz_B=w1280"
+            src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=300&fit=crop&couple=1"
             alt="Ring Couple"
+            loading="lazy"
           />
           <div class="gallery-caption">Ring Couple</div>
         </div>
@@ -1124,8 +1141,9 @@
       <div class="card">
         <div class="card-img">
           <img
-            src="https://lh3.googleusercontent.com/sitesv/APaQ0STpbkuvG9ceomU0rzyYfbguFpNxaSmNoA_umsuq9CEnGBa7COvgPxnH-VgypGYXLcWKUfHesUz72IjjvGqIfo_V1sVQnFdSJl13kE61GZCZfE-ze_xdo-TLJqCjeKEskTDcrAUY5KaW8yAF_qUb3m_5SmjHXIVYYVF8t7DLx7n7n6vzahfmcZEs151-GlZDi8Pm3ugKjZozfSDDJ51nBu8jGK_7LSuWhEVI=w1280"
+            src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=300&fit=crop"
             alt="Sunrio series"
+            loading="lazy"
           />
         </div>
         <div class="card-content">
@@ -1143,8 +1161,9 @@
       <div class="card">
         <div class="card-img">
           <img
-            src="https://lh3.googleusercontent.com/sitesv/APaQ0STtNZoKK7U-QH6KMBc8uEEtMbsHMpmkxlD2gzkqriOaLoHospCMW1afi7D_gRGK7rkTRENfZ2GSOOh14UXG3to8bcl-RZSWdCzzDqE_ZnJ7AqQItWvNS3POR_HtPVKthCzX74A9GtzisRriu_aXB-VBJq_58GOjWORkg6a_jwD9ALlIVoOqpkzxfn81Tf5m_pCDYfexSd56ZAl2PtxyHaNL6CUTNNVofhPx3pk=w1280"
+            src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=300&fit=crop&bw=1"
             alt="Toy story"
+            loading="lazy"
           />
         </div>
         <div class="card-content">
@@ -1162,8 +1181,9 @@
       <div class="card">
         <div class="card-img">
           <img
-            src="https://lh3.googleusercontent.com/sitesv/APaQ0SQtLHtKPwUl8IZoge_v-1M10lvo-hqlywBkGg8jlnoHqZvK8uNrbfKGW113g1FQ5yEcpMIbLAcTAgb3zZrLQybSvCQ1iMVd97Iit9GcsWARmNJnY7d-uKQs_JeFNcUro2Ucmhr9LcAoeZVvl5lb7Wla5DdYdMy8DxrXr2udOWAoKljORQfKJ17cTA-w6q6aZES40t_vq5BjVLUP7ABhj7_xWD6Y-q3oOc1McI0=w1280"
+            src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=300&fit=crop&sepia=1"
             alt="Love series"
+            loading="lazy"
           />
         </div>
         <div class="card-content">
@@ -1181,8 +1201,9 @@
       <div class="card">
         <div class="card-img">
           <img
-            src="https://lh3.googleusercontent.com/sitesv/APaQ0SRtoY6Z2Wb1nlUECDwIDRaXGFa5YzGRcyAm2senhlD0Mg8n-cbxtjeBzZoGhLFplOogWK1_FAO5z6GQzYhXVb4yMEkOtLpRdB4NYW0oMqscmRCWSDFV7ZupczJtuD3tfly8eo9mJpCekH25P5SRZgqX2cuKwphFXxkIEZD-SAfQ1CIfgwEwybEoAqvr6rjYsIhScNb3jvEaJQ6wviPzE2lpJN7A4xRgMUrj=w1280"
+            src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=300&fit=crop&gold=1"
             alt="Gold series"
+            loading="lazy"
           />
         </div>
         <div class="card-content">
@@ -1200,8 +1221,9 @@
       <div class="card">
         <div class="card-img">
           <img
-            src="https://lh3.googleusercontent.com/sitesv/APaQ0SR5lL5Uzy25K5ifYYtvxy1S-9IfMl1Rlvko3WeHcQ1l0bmfa9JJxHUqHGgzQIm_9dPC79_3KfEoBp2TR-4_zopp-ZOAeLBuhwaHt4Lj2hoOcRF2DjmWGi5pENIRrWCSUSmpuw4E2BwtIsIk3OQ8OKbNrU9kSZZ50Dl_uoEY8ub_oRCLo2MYElUW0_sUGCVpsPqXPP9d5LKGJbdwyZHBzGSCQN5pZWLMjz_B=w1280"
+            src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=300&fit=crop&couple=1"
             alt="Ring couple"
+            loading="lazy"
           />
         </div>
         <div class="card-content">
