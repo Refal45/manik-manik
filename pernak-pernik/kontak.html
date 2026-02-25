@@ -2,7 +2,7 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes" />
     <title>˚˖𓍢 D.bizuujueri ˖𓍢🎀 ⋆ kontak</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -11,22 +11,22 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Segoe UI', 'Helvetica Neue', system-ui, sans-serif;
+        font-family: 'Segoe UI', 'Helvetica Neue', system-ui, -apple-system, sans-serif;
       }
 
       body {
         background: linear-gradient(155deg, #fff2f5 0%, #ffe2ea 100%);
         color: #2a2a2a;
         min-height: 100vh;
+        overflow-x: hidden;
+        width: 100%;
       }
 
       /* --- navigasi dengan burger menu --- */
       nav {
         background: #ffffff;
-        box-shadow:
-          0 4px 15px rgba(0, 0, 0, 0.05),
-          0 2px 0 #ffb6c1;
-        padding: 1rem 2rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        padding: 0.8rem 1.5rem;
         position: sticky;
         top: 0;
         z-index: 100;
@@ -35,10 +35,11 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
       }
 
       .logo a {
-        font-size: 2rem;
+        font-size: clamp(1.3rem, 5vw, 2rem);
         font-weight: 700;
         text-decoration: none;
         background: linear-gradient(145deg, #000000, #ff5f7c);
@@ -46,9 +47,11 @@
         background-clip: text;
         color: transparent;
         letter-spacing: 0.5px;
+        white-space: nowrap;
       }
+      
       .logo span {
-        font-size: 1.3rem;
+        font-size: clamp(0.9rem, 3vw, 1.3rem);
         color: #000000;
       }
 
@@ -61,6 +64,7 @@
         border: none;
         padding: 0.5rem;
         transition: color 0.3s;
+        z-index: 101;
       }
 
       .burger-menu:hover {
@@ -69,7 +73,7 @@
 
       .nav-links {
         display: flex;
-        gap: 1.8rem;
+        gap: 0.8rem;
         font-weight: 600;
         flex-wrap: wrap;
         align-items: center;
@@ -78,12 +82,13 @@
       .nav-links a {
         text-decoration: none;
         color: #000000;
-        font-size: 1.2rem;
-        padding: 0.5rem 1rem;
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+        padding: 0.4rem 0.8rem;
         border-radius: 40px;
         background: transparent;
         transition: 0.2s;
         border: 1px solid transparent;
+        white-space: nowrap;
       }
 
       .nav-links a:hover {
@@ -102,28 +107,33 @@
       /* --- header halaman --- */
       .page-header {
         text-align: center;
-        padding: 2rem 1.5rem 0.5rem;
+        padding: 1.5rem 1rem 0.5rem;
+        width: 100%;
       }
 
       .page-header h1 {
-        font-size: 2.8rem;
+        font-size: clamp(1.8rem, 6vw, 2.8rem);
         background: linear-gradient(135deg, #000000, #ff5f7c);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
         margin-bottom: 0.25rem;
+        line-height: 1.2;
+        word-break: break-word;
       }
 
       .page-header .tagline {
         background: #ffffff;
         border: 2px solid #000000;
         display: inline-block;
-        padding: 0.6rem 2rem;
+        padding: 0.5rem 1.2rem;
         border-radius: 60px;
-        font-size: 1.4rem;
+        font-size: clamp(0.9rem, 4vw, 1.4rem);
         color: #000000;
         box-shadow: 0 4px 15px #ffb7c9;
         margin: 0.8rem 0 1.5rem;
+        max-width: 95%;
+        word-break: break-word;
       }
 
       .page-header .tagline i {
@@ -135,36 +145,39 @@
       .contact-container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 1rem 2rem 3rem;
+        padding: 0.5rem 1rem 2rem;
+        width: 100%;
       }
 
       /* kartu kontak utama */
       .contact-card {
         background: #ffffff;
         border: 3px solid #000000;
-        border-radius: 70px 70px 40px 40px;
-        padding: 2.5rem 2rem;
-        margin-bottom: 2.5rem;
-        box-shadow:
-          0 10px 0 #ffb7c9,
-          0 20px 25px -10px rgba(0, 0, 0, 0.3);
+        border-radius: clamp(30px, 5vw, 70px) clamp(30px, 5vw, 70px) clamp(20px, 4vw, 40px) clamp(20px, 4vw, 40px);
+        padding: 1.5rem;
+        margin-bottom: 1.8rem;
+        box-shadow: 0 10px 0 #ffb7c9, 0 20px 25px -10px rgba(0, 0, 0, 0.3);
         display: flex;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 1.5rem;
         align-items: center;
+        width: 100%;
       }
 
       .contact-info {
-        flex: 2 1 300px;
+        flex: 2 1 280px;
+        min-width: 250px;
       }
 
       .contact-info h2 {
-        font-size: 2.2rem;
+        font-size: clamp(1.5rem, 5vw, 2.2rem);
         color: #000000;
         display: flex;
         align-items: center;
-        gap: 0.8rem;
-        margin-bottom: 1.5rem;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        word-break: break-word;
       }
 
       .contact-info h2 i {
@@ -174,30 +187,34 @@
       .contact-detail {
         background: #fff2f5;
         border: 2px dashed #000000;
-        border-radius: 40px;
-        padding: 1.5rem;
-        margin-bottom: 1.5rem;
+        border-radius: clamp(20px, 4vw, 40px);
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+        width: 100%;
       }
 
       .contact-item {
         display: flex;
         align-items: center;
-        gap: 1.2rem;
-        margin-bottom: 1.2rem;
-        font-size: 1.2rem;
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+        font-size: clamp(0.9rem, 3vw, 1.2rem);
+        flex-wrap: wrap;
+        word-break: break-word;
       }
 
       .contact-item i {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         background: #000000;
         color: #ffffff;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         border: 2px solid #ffb7c9;
+        flex-shrink: 0;
       }
 
       .contact-item a {
@@ -205,6 +222,8 @@
         color: #2a2a2a;
         font-weight: 500;
         transition: color 0.3s;
+        word-break: break-all;
+        flex: 1;
       }
 
       .contact-item a:hover {
@@ -213,29 +232,30 @@
       }
 
       .contact-image {
-        flex: 1 1 250px;
+        flex: 1 1 200px;
+        min-width: 180px;
         background: #ffe0eb;
         border: 3px solid #000000;
-        border-radius: 50px;
-        padding: 2rem 1rem;
+        border-radius: clamp(20px, 5vw, 50px);
+        padding: 1.5rem 0.8rem;
         text-align: center;
         box-shadow: 0 8px 0 #ffb7c9;
       }
 
       .contact-image i {
-        font-size: 6rem;
+        font-size: clamp(3rem, 8vw, 6rem);
         color: #000000;
-        margin-bottom: 1rem;
+        margin-bottom: 0.8rem;
       }
 
       .contact-image p {
-        font-size: 1.3rem;
+        font-size: clamp(1rem, 4vw, 1.3rem);
         font-weight: 700;
         color: #000000;
       }
 
       .contact-image .small {
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-weight: 400;
         margin-top: 0.5rem;
       }
@@ -244,38 +264,41 @@
       .social-section {
         background: #ffffff;
         border: 3px solid #000000;
-        border-radius: 70px 70px 40px 40px;
-        padding: 2.5rem 2rem;
-        margin-bottom: 2.5rem;
+        border-radius: clamp(30px, 5vw, 70px) clamp(30px, 5vw, 70px) clamp(20px, 4vw, 40px) clamp(20px, 4vw, 40px);
+        padding: 1.5rem;
+        margin-bottom: 1.8rem;
         box-shadow: 0 10px 0 #ffb7c9;
+        width: 100%;
       }
 
       .social-section h2 {
-        font-size: 2.2rem;
+        font-size: clamp(1.5rem, 5vw, 2.2rem);
         color: #000000;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 0.8rem;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        word-break: break-word;
       }
 
       .social-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1.2rem;
+        width: 100%;
       }
 
       .social-item {
         background: #fff2f5;
         border: 2px solid #000000;
-        border-radius: 50px;
-        padding: 1.5rem 1rem;
+        border-radius: clamp(20px, 4vw, 50px);
+        padding: 1.2rem 0.8rem;
         text-align: center;
-        transition:
-          transform 0.3s,
-          box-shadow 0.3s;
+        transition: transform 0.3s, box-shadow 0.3s;
+        width: 100%;
       }
 
       .social-item:hover {
@@ -284,45 +307,49 @@
       }
 
       .social-icon {
-        width: 80px;
-        height: 80px;
+        width: clamp(60px, 12vw, 80px);
+        height: clamp(60px, 12vw, 80px);
         background: #000000;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 auto 1rem;
+        margin: 0 auto 0.8rem;
         border: 3px solid #ffb7c9;
       }
 
       .social-icon i {
-        font-size: 2.5rem;
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
         color: #ffffff;
       }
 
       .social-item h3 {
-        font-size: 1.5rem;
+        font-size: clamp(1.1rem, 4vw, 1.5rem);
         color: #000000;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.3rem;
+        word-break: break-word;
       }
 
       .social-item .username {
-        font-size: 1rem;
+        font-size: 0.9rem;
         color: #ff5f7c;
         font-weight: 600;
-        margin-bottom: 1rem;
+        margin-bottom: 0.8rem;
+        word-break: break-word;
       }
 
       .social-item .btn {
         display: inline-block;
         background: #000000;
         color: #ffffff;
-        padding: 0.5rem 1.5rem;
+        padding: 0.4rem 1.2rem;
         border-radius: 40px;
         text-decoration: none;
         font-weight: 600;
         border: 2px solid #ffb7c9;
         transition: all 0.3s;
+        font-size: 0.9rem;
+        white-space: nowrap;
       }
 
       .social-item .btn:hover {
@@ -335,111 +362,129 @@
       .hours-section {
         background: #ffffff;
         border: 3px solid #000000;
-        border-radius: 70px 70px 40px 40px;
-        padding: 2.5rem 2rem;
-        margin-bottom: 2.5rem;
+        border-radius: clamp(30px, 5vw, 70px) clamp(30px, 5vw, 70px) clamp(20px, 4vw, 40px) clamp(20px, 4vw, 40px);
+        padding: 1.5rem;
+        margin-bottom: 1.8rem;
         box-shadow: 0 10px 0 #ffb7c9;
+        width: 100%;
       }
 
       .hours-section h2 {
-        font-size: 2.2rem;
+        font-size: clamp(1.5rem, 5vw, 2.2rem);
         color: #000000;
         text-align: center;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.2rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 0.8rem;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        word-break: break-word;
       }
 
       .hours-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
         text-align: center;
+        width: 100%;
       }
 
       .hours-item {
         background: #ffe0eb;
         border: 2px solid #000000;
-        border-radius: 40px;
-        padding: 1.2rem;
+        border-radius: clamp(20px, 4vw, 40px);
+        padding: 1rem 0.5rem;
+        width: 100%;
       }
 
       .hours-item .day {
         font-weight: 700;
-        font-size: 1.3rem;
+        font-size: clamp(1rem, 3.5vw, 1.3rem);
         color: #000000;
+        margin-bottom: 0.3rem;
+        word-break: break-word;
       }
 
       .hours-item .time {
-        font-size: 1.1rem;
+        font-size: clamp(0.8rem, 3vw, 1.1rem);
         color: #2a2a2a;
+        word-break: break-word;
       }
 
       .hours-note {
-        margin-top: 1.5rem;
+        margin-top: 1.2rem;
         text-align: center;
-        font-size: 1.1rem;
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
         background: #000000;
         color: #ffffff;
         padding: 0.8rem;
         border-radius: 40px;
         border: 2px solid #ffb7c9;
+        word-break: break-word;
       }
 
       /* FAQ singkat */
       .faq-contact {
         background: #ffffff;
         border: 3px solid #000000;
-        border-radius: 70px 70px 40px 40px;
-        padding: 2.5rem 2rem;
-        margin-bottom: 2.5rem;
+        border-radius: clamp(30px, 5vw, 70px) clamp(30px, 5vw, 70px) clamp(20px, 4vw, 40px) clamp(20px, 4vw, 40px);
+        padding: 1.5rem;
+        margin-bottom: 1.8rem;
         box-shadow: 0 10px 0 #ffb7c9;
+        width: 100%;
       }
 
       .faq-contact h2 {
-        font-size: 2.2rem;
+        font-size: clamp(1.5rem, 5vw, 2.2rem);
         color: #000000;
         text-align: center;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.2rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 0.8rem;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        word-break: break-word;
       }
 
       .faq-contact-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        width: 100%;
       }
 
       .faq-contact-item {
         background: #fff2f5;
         border: 2px dashed #000000;
-        border-radius: 30px;
-        padding: 1.2rem;
+        border-radius: 20px;
+        padding: 1rem;
+        width: 100%;
       }
 
       .faq-contact-item .question {
         font-weight: 700;
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 3.5vw, 1.2rem);
         color: #000000;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.4rem;
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.4rem;
+        flex-wrap: wrap;
+        word-break: break-word;
       }
 
       .faq-contact-item .question i {
         color: #ff5f7c;
+        font-size: 0.7rem;
       }
 
       .faq-contact-item .answer {
-        font-size: 1rem;
+        font-size: clamp(0.85rem, 3vw, 1rem);
         color: #2a2a2a;
-        padding-left: 1.8rem;
+        padding-left: 1.5rem;
+        word-break: break-word;
       }
 
       /* bagian info (tentang, kontak, produk) */
@@ -447,55 +492,62 @@
         background: #ffffff;
         border: 3px solid #000000;
         max-width: 1200px;
-        margin: 1rem auto 2.5rem;
-        padding: 2rem 2rem;
-        border-radius: 90px 90px 45px 45px;
+        margin: 1rem auto 2rem;
+        padding: 1.5rem 1rem;
+        border-radius: clamp(30px, 6vw, 90px) clamp(30px, 6vw, 90px) clamp(25px, 4vw, 45px) clamp(25px, 4vw, 45px);
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 2.5rem;
+        gap: 1.5rem;
         text-align: center;
         box-shadow: 0 10px 20px #ffb7c9;
+        width: calc(100% - 2rem);
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .info-block {
-        flex: 1 1 180px;
+        flex: 1 1 150px;
+        min-width: 130px;
       }
 
       .info-block i {
-        font-size: 2.6rem;
+        font-size: clamp(1.8rem, 5vw, 2.6rem);
         background: #000000;
-        padding: 0.9rem;
+        padding: 0.7rem;
         border-radius: 50%;
         color: #ffffff;
-        box-shadow:
-          0 5px 0 #ffb7c9,
-          0 8px 12px rgba(0, 0, 0, 0.1);
-        margin-bottom: 0.8rem;
+        box-shadow: 0 5px 0 #ffb7c9, 0 8px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 0.6rem;
       }
 
       .info-block h4 {
-        font-size: 2rem;
+        font-size: clamp(1.2rem, 4vw, 2rem);
         color: #000000;
+        margin-bottom: 0.3rem;
+        word-break: break-word;
       }
 
       .info-block p {
-        font-size: 1.1rem;
-        margin: 0.5rem 0;
+        font-size: clamp(0.85rem, 3vw, 1.1rem);
+        margin: 0.3rem 0;
         color: #2a2a2a;
+        word-break: break-word;
       }
 
       .info-block a {
         text-decoration: none;
         background: #ffb7c9;
-        padding: 0.5rem 1.5rem;
+        padding: 0.4rem 1rem;
         border-radius: 40px;
         color: #000000;
         font-weight: 700;
         display: inline-block;
         border: 2px solid #000000;
-        margin-top: 0.5rem;
+        margin-top: 0.4rem;
         transition: all 0.2s;
+        font-size: 0.9rem;
+        white-space: nowrap;
       }
 
       .info-block a:hover {
@@ -506,23 +558,30 @@
 
       footer {
         text-align: center;
-        padding: 2rem;
+        padding: 1.5rem 1rem;
         background: #000000;
         border-top: 6px solid #ffb7c9;
         color: #ffffff;
-        font-size: 1.1rem;
-        margin-top: 2.5rem;
+        font-size: clamp(0.8rem, 3vw, 1.1rem);
+        margin-top: 2rem;
+        width: 100%;
+        word-break: break-word;
       }
 
       footer i {
         color: #ffb7c9;
-        margin: 0 0.3rem;
+        margin: 0 0.2rem;
+      }
+
+      footer a {
+        color: #ffb7c9;
+        text-decoration: none;
       }
 
       /* responsive */
       @media screen and (max-width: 768px) {
         nav {
-          padding: 1rem 1.5rem;
+          padding: 0.7rem 1rem;
         }
 
         .burger-menu {
@@ -537,8 +596,8 @@
           width: 100%;
           background: #ffffff;
           flex-direction: column;
-          padding: 1rem 0 2rem;
-          gap: 0.5rem;
+          padding: 1rem 0;
+          gap: 0.3rem;
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
           border-bottom: 2px solid #000000;
           border-top: 1px solid #ffb7c9;
@@ -553,56 +612,70 @@
           width: 90%;
           margin: 0 auto;
           text-align: center;
-          font-size: 1.3rem;
-          padding: 0.8rem 1rem;
+          font-size: 1.1rem;
+          padding: 0.6rem 0.8rem;
+          white-space: normal;
         }
 
-        .page-header h1 {
-          font-size: 2.2rem;
-        }
-
-        .page-header .tagline {
-          font-size: 1.2rem;
-          padding: 0.5rem 1rem;
-        }
-
-        .contact-card,
-        .social-section,
-        .hours-section,
-        .faq-contact {
-          padding: 1.5rem;
-          border-radius: 50px 50px 30px 30px;
-        }
-
-        .contact-info h2,
-        .social-section h2,
-        .hours-section h2,
-        .faq-contact h2 {
-          font-size: 2rem;
+        .contact-item {
+          gap: 0.6rem;
         }
       }
 
       @media screen and (max-width: 480px) {
-        .logo a {
+        .contact-card {
+          padding: 1rem;
+        }
+        
+        .contact-info h2 {
           font-size: 1.5rem;
         }
-
-        .logo span {
-          font-size: 1rem;
-        }
-
-        .more-info {
-          padding: 1.5rem 1rem;
-          border-radius: 50px 50px 30px 30px;
-        }
-
-        .info-block h4 {
-          font-size: 1.5rem;
-        }
-
+        
         .contact-item {
+          font-size: 0.9rem;
+        }
+        
+        .social-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .hours-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .faq-contact-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .more-info {
+          flex-direction: column;
+          gap: 1rem;
+          padding: 1rem;
+        }
+        
+        .info-block {
+          width: 100%;
+        }
+      }
+
+      /* perbaikan untuk device sangat kecil */
+      @media screen and (max-width: 320px) {
+        .logo a {
           font-size: 1rem;
-          gap: 0.8rem;
+        }
+        
+        .contact-item {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        
+        .contact-item i {
+          margin-bottom: 0.3rem;
+        }
+        
+        .btn {
+          white-space: normal !important;
+          padding: 0.4rem 0.8rem !important;
         }
       }
     </style>
@@ -651,7 +724,7 @@
               <span>Depok, Indonesia</span>
             </div>
           </div>
-          <p style="font-size: 1.1rem; margin-top: 1rem"><i class="fas fa-clock" style="color: #ff5f7c"></i> Balasan dalam 1-2 jam (jam kerja)</p>
+          <p style="font-size: clamp(0.9rem, 3vw, 1.1rem); margin-top: 0.8rem"><i class="fas fa-clock" style="color: #ff5f7c"></i> Balasan dalam 1-2 jam (jam kerja)</p>
         </div>
         <div class="contact-image">
           <i class="fas fa-headset"></i>
@@ -753,12 +826,12 @@
     <footer>
       <p>🌸 ˚˖𓍢 D.bizuujueri ˖𓍢🎀 — present for making your fashion look</p>
       <p style="margin: 0.7rem 0">
-        <a href="https://www.instagram.com/d.bizujueri?igsh=bnpwNzM3ZHh5Zmpp" target="_blank" style="color: #ffb7c9; text-decoration: none"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/d.bizujueri?igsh=bnpwNzM3ZHh5Zmpp" target="_blank" style="color: #ffb7c9;"><i class="fab fa-instagram"></i></a>
         <i class="fab fa-whatsapp"></i>
         <i class="fab fa-tiktok"></i> @dbizuujueri
       </p>
-      <p style="font-size: 1rem">⋆.⋆ perhiasan manik-manik ⋆｡°✩ harga ramah di kantong</p>
-      <p style="font-size: 0.9rem; margin-top: 1rem">beranda · produk · tentang · kontak. 🖤</p>
+      <p style="font-size: clamp(0.8rem, 2.5vw, 1rem)">⋆.⋆ perhiasan manik-manik ⋆｡°✩ harga ramah di kantong</p>
+      <p style="font-size: 0.8rem; margin-top: 1rem">beranda · produk · tentang · kontak. 🖤</p>
     </footer>
 
     <!-- JavaScript burger menu -->
@@ -766,7 +839,8 @@
       const burgerMenu = document.getElementById('burgerMenu');
       const navLinks = document.getElementById('navLinks');
 
-      burgerMenu.addEventListener('click', function () {
+      burgerMenu.addEventListener('click', function (e) {
+        e.stopPropagation();
         navLinks.classList.toggle('show');
         const icon = burgerMenu.querySelector('i');
         if (navLinks.classList.contains('show')) {
@@ -792,9 +866,16 @@
         if (!burgerMenu.contains(event.target) && !navLinks.contains(event.target)) {
           navLinks.classList.remove('show');
           const icon = burgerMenu.querySelector('i');
-          icon.classList.remove('fa-times');
-          icon.classList.add('fa-bars');
+          if (icon) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          }
         }
+      });
+
+      // Prevent closing when clicking inside navLinks
+      navLinks.addEventListener('click', function(e) {
+        e.stopPropagation();
       });
     </script>
   </body>
